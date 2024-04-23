@@ -1,3 +1,5 @@
+#Slicing Task
+
 #    01234567890123456
 s = "Tops Technologies"
 #    76543210987654321
