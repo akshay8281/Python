@@ -1,0 +1,28 @@
+51.  How Many Basic Types Of Functions Are Available In Python?
+Ans : 
+
+In Python, there are three basic types of functions:
+
+1. **Built-in Functions**: These are functions that are built into the Python interpreter and are always available for use. Examples include `print()`, `len()`, `type()`, etc.
+
+2. **User-defined Functions**: These are functions that users create themselves using the `def` keyword. They allow users to group statements together to perform a specific task. Example:
+
+>>>>>>
+
+   def greet(name):
+       print(f"Hello, {name}!")
+
+   greet("Alice")
+
+>>>>>>>
+
+3. **Anonymous Functions (Lambda Functions)**: These are small, anonymous functions defined using the `lambda` keyword. They are often used when a simple function is needed for a short period of time. Example:
+
+>>>>>>>
+
+   add = lambda x, y: x + y
+   print(add(2, 3))
+
+>>>>>>>
+
+These are the basic types of functions in Python, each serving a different purpose and use case.

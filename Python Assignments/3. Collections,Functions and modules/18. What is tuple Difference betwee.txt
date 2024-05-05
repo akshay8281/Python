@@ -1,0 +1,39 @@
+18. What is tuple? Difference between list and tuple.
+Ans : 
+
+A tuple in Python is a data structure similar to a list, but with some key differences. Here's an overview of tuples and the differences between tuples and lists:
+
+>> Definition:
+
+List: A list is a collection of items, separated by commas and enclosed within square brackets [ ].
+Tuple: A tuple is a collection of items, separated by commas and enclosed within parentheses ( ).
+
+>> Mutability:
+
+List: Lists are mutable, meaning you can change the elements of a list after it is created.
+Tuple: Tuples are immutable, meaning once a tuple is created, you cannot change the elements in it.
+
+>> Example:
+
+List: my_list = [1, 2, 3, 4, 5]
+Tuple: my_tuple = (1, 2, 3, 4, 5)
+
+>> Accessing Elements:
+
+List: Elements in a list can be accessed using indices. For example, my_list[0] would return the first element of the list.
+
+Tuple: Elements in a tuple can also be accessed using indices, just like lists.
+
+>> Appending and Extending:
+
+List: Lists support methods like append() and extend() to add elements to the list.
+
+Tuple: Tuples are immutable, so you cannot add or remove elements from a tuple. Once a tuple is created, its size cannot be changed.
+
+>> Use Cases:
+
+List: Use lists when you have a collection of items that may need to be modified, such as a list of tasks, names, or numbers.
+
+Tuple: Use tuples when you want to store a collection of items that should not change, such as coordinates, configuration settings, or constant values.
+
+In summary, the main differences between lists and tuples are mutability and the methods available for modification. Lists are mutable and support methods for adding, removing, and modifying elements. Tuples are immutable and are used for storing collections of items that should not change.
