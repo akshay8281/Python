@@ -1,0 +1,39 @@
+<<<<<  Object Oriented Programs  >>>>>
+
+The main object oriented are
+1. class
+2. Object
+3. inheritence
+4. Polymerposim
+5. Encapsulasion
+6. Absttractions
+
+<<<  Defination  >>>
+
+Class :
+Class is group of different type variables and functions.
+
+Object : 
+Object is an instance of class.
+
+Inheritence : 
+The object of one class can acquire the properties of object of another class.
+Creating a new class from an existing class is called inheritence.
+
+Polimorphism : 
+One name multiple form
+
+Type Two
+
+1. Compile time polymorphism (Method Over loading) :
+When there is an more than a single class having the same name but with a different number of arguements than it is called Method Over Loading.
+
+2. Runtime Polymorphism (Method Over Riding) :
+When there is same method prototype in your both base class and derived class and if you call that method using the object derived class then only derived method class will be call. Then you can say that method of derive class over rides the method of 
+
+
+Encapsulasion :
+To bind a code and data into a single unit is called Encapsulation
+
+Abstraction : 
+Abstraction means data hiding.
