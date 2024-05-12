@@ -1,19 +1,22 @@
 # 47. Write a Python function to calculate the factorial of a number
 # (a nonnegative integer)
-print("\n","*" * 60)
+
+
+print("\n", "*" * 60)
 
 userNum = int(input("\nEnter a Number: "))
 
-def factorial(n):
-    if n < 0:
-        return "Negative integer,cannot Factorial og given Number."
-    elif n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n-1)
+factorial = 1
+if userNum < 0:
+    result = "Negative integer, cannot find factorial."
+elif userNum == 0 or userNum == 1:
+    result = 1
+else:
+    for i in range(2, userNum + 1):
+        factorial *= i
+    result = factorial
 
-result = factorial(userNum)
-print("\nFactorial of",userNum,"is",result)
+print("\nFactorial of", userNum, "is", result)
 
-print("\n","*" * 60)
+print("\n", "*" * 60)
 

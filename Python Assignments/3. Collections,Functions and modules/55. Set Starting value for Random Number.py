@@ -5,5 +5,3 @@ import random
 random.seed(int(input("Enter Seed value : ")))
 
 print("Random Number using seed for starting :",random.randint(1, 10000))
-
-

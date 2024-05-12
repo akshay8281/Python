@@ -1,7 +1,13 @@
 # 28. Write a Python program to remove an empty tuple(s) from a list of tuples.
 
-List = [(),(),(1,2),(),(True,False),(),("a","b","c","d"),()]
+tupleList = [(1, 2), (), (3, 4, 5), (), (), (6,), ()]
 
-List = [tupple for tupple in List if tupple]
 
-print("List Items : \n",List) 
+newTupleList = []
+
+
+for data in tupleList:
+    if data :
+        newTupleList.append(data)
+
+print("List after removing empty tuples : ", newTupleList)

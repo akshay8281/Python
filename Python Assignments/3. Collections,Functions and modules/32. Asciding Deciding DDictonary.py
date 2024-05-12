@@ -1,14 +1,11 @@
 # 32. Write a Python script to sort (ascending and descending) a
 # dictionary by value.
 
-import operator
 
-dictonary = {'a': 2, 'b': 1, 'c': 3}
+numbers = [5, 2, 8, 1, 9, 3]
 
-sortDictonary = dict(sorted(dictonary.items(), key=operator.itemgetter(1)))
+num_ascending = sorted(numbers)
+print("\nSorted list Ascending :", num_ascending)
 
-print("\nDictonary Data are : ",dictonary)
-
-print("\nSorted Data are : ",sortDictonary)
-
-
+num_descending = sorted(numbers, reverse=True)
+print("\nSorted list Descending :", num_descending)

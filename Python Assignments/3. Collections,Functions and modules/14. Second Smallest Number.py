@@ -1,21 +1,18 @@
 # 14. Write a Python program to find the second smallest number in a list.
 
 
-def second_smallest(numbers):
-
-    smallest = min(numbers)
-
-    numbers.remove(smallest)
-
-    second_smallest = min(numbers)
-    
-    return second_smallest
-
-numbers = [1, 2, 3, 10, 15, 0, 25, 6]
-
-result = second_smallest(numbers)
-
-print("Second smallest number:", result)
+numList = [1,50,3,10,15,0,25,6]
 
 
+small = numList[0]
+second_small = numList[1]
 
+
+for num in numList[2:]:
+    if num < small:
+        second_small = small
+        small = num
+    elif num < second_small:
+        second_small = num
+
+print("Second smallest number:", second_small)

@@ -3,19 +3,16 @@
 they have at least one common member
 '''
 
+list1 = [1,2,3,4,5]
+list2 = [6,7,8,9]
 
-def has_common_member(lst1, lst2):
-    for elem in lst1:
-        if elem in lst2:
-            return True
-    return False
+common = False
+for data in list1:
+    if data in list2:
+        common = True
+        break
 
-# Example usage
-list1 = [1, 2, 3, 4, 5]
-list2 = [5, 6, 7, 8, 9]
-
-print("Do the lists share any numbers?", has_common_member(list1, list2))
-
+print("Data which is Common : ", common)
 
 
 

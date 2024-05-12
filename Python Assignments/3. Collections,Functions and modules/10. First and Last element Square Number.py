@@ -3,13 +3,14 @@
 elements where the values are square of numbers between 1 and 30.
 '''
 
-l = [(i**2) for i in range(11, 25)]
+Numsquares = []
 
-print("First 5 elements:", l[:5])
-print("Last 5 elements:", l[-5:])
+for num in range(1, 31):
+    Numsquares.append(num * num)
 
+print("First 5 elements:")
+print(Numsquares[:5])
 
-
-
-
+print("\nLast 5 elements:")
+print(Numsquares[-5:])
 

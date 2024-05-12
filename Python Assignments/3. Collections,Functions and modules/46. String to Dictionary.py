@@ -4,11 +4,11 @@ print("\n","*" * 60)
 myStr = input("\nEnter a String : ")
 
 dictionary = dict()
-for alpha in myStr:
-    if alpha in dictionary:
-        dictionary[alpha]+=1
+for char in myStr:
+    if char in dictionary:
+        dictionary[char] += 1
     else:
-        dictionary[alpha]=1
+        dictionary[char] = 1
 print("\nDictionary created from characters of the string is : \n")
 print(dictionary)
 
