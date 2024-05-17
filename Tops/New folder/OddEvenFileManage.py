@@ -14,9 +14,6 @@ l = data.read().split(",")[:-1]
 for i in l :
     if int(i)%2==0 :
         even.write(i + ",")
-    elif (3, int(i/2) + 1, 2) :
-        prime.write(i + ",")
-    
     else :
         odd.write(i + ",")
         

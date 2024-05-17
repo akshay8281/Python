@@ -1,0 +1,12 @@
+Make Exe File in Python
+
+///Command to install Library to create Exe file
+
+in CMD Command Prompt (Make sure net is On)
+
+1. pip install pyinstaller
+2. After that access the folder or path have to create an exe file by using cmd commands
+3. create Exe File in that folderwhere you want to create
+	>> Command : 
+		pyinstaller --noconsole --onefile TkinterDemo.py {file name}
+	

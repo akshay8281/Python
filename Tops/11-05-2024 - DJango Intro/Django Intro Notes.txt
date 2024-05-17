@@ -1,0 +1,73 @@
+Django
+
+Does not write SQL Query for Data base,table bcs Django itself make through its Framework.
+
+One Project of E-Commerce App
+in that we have Buyer,Seller and Admin
+
+Buyer - Order,Whishlist,Cart,Search,Payment
+Seller - Add Products,Discounts,Descriptions,Delete etc
+Admin - Handle Complains,Buyer and Seller Both.
+
+In Django does not create Admin bcs Django creates automattically
+
+For Django have to install Sublime Text software Download
+
+select folder for store or save your project
+
+open CMD Command Prompt and select the same path open in sublime where you want to create project or save files.
+
+commants for Virtual Environment : 
+
+select the folder as per open in Sublime text 
+{ python -m venv myvenv} 
+m = make , venv = Virtual Environment ,name of Virtual Environment = myvenv
+Enter
+Eg :  E:\Coding World\Python\Python\Tops\11-05-2024 - DJango Intro\Django Project>python -m venv myvenv
+
+
+Activate the Django by command : 
+Sublime Path { myvenv\Scripts\activate }
+Eg : E:\Coding World\Python\Python\Tops\11-05-2024 - DJango Intro\Django Project>myvenv\Scripts\activate
+
+Instal Django on that Project : 
+command = pip install Django
+{ If we want to install specific version of Django write ( pip install Django==4.0 ) }
+
+Django install successfully
+
+we have to Create Project and App
+
+Project = in that we get Admin Panel
+App = In thar we create User panel
+
+Create App 
+(myvenv) E:\Coding World\Python\Python\Tops\11-05-2024 - DJango Intro\Django Project>django-admin startproject mysite .
+
+using command { django-admin startproject mysite . }
+mysite = it is name of file it would be anything
+( . ) = Dot represent the Current Folder
+
+After Successfully install
+
+change Time Zone in setting.py in mysite
+UTC change into = Asia/Kolkata
+
+Manage and Runserver : 
+(myvenv) E:\Coding World\Python\Python\Tops\11-05-2024 - DJango Intro\Django Project>manage.py runserver
+
+In your Browser check status your file or project install successfully or not
+command = localhost:8000
+
+it is all setup of User Panel Home Page
+
+Admin is Pending..........
+
+
+
+
+
+
+
+
+ORM - Object relational Mapping
