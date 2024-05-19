@@ -3,12 +3,12 @@
 The main object oriented are
 1. class
 2. Object
-3. inheritence
-4. Polymerposim
-5. Encapsulasion
-6. Absttractions
+3. inheritance
+4. Polymorphism
+5. Encapsulation
+6. Abstractions
 
-<<<  Defination  >>>
+<<<  Definition  >>>
 
 Class :
 Class is group of different type variables and functions.
@@ -16,11 +16,11 @@ Class is group of different type variables and functions.
 Object : 
 Object is an instance of class.
 
-Inheritence : 
+Inheritance : 
 The object of one class can acquire the properties of object of another class.
 Creating a new class from an existing class is called inheritence.
 
-Polimorphism : 
+Polymorphism : 
 One name multiple form
 
 Type Two
@@ -32,7 +32,7 @@ When there is an more than a single class having the same name but with a differ
 When there is same method prototype in your both base class and derived class and if you call that method using the object derived class then only derived method class will be call. Then you can say that method of derive class over rides the method of 
 
 
-Encapsulasion :
+Encapsulation :
 To bind a code and data into a single unit is called Encapsulation
 
 Abstraction : 

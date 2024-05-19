@@ -1,0 +1,21 @@
+A `try-except` block can have multiple `except` statements to handle different types of exceptions. Each `except` statement can handle a specific exception type.
+
+Some built-in exception classes in Python include:
+
+1.  Exception : Base class for all exceptions.
+2.  SyntaxError : Raised for syntax errors.
+3.  TypeError : Raised when an operation or function is applied to an object of inappropriate type.
+4.  ValueError : Raised when a function receives an argument of the correct type but with an inappropriate value.
+5.  ZeroDivisionError : Raised when the second argument of a division or modulo operation is zero.
+6.  IndexError : Raised when a sequence index is out of range.
+7.  KeyError : Raised when a dictionary key is not found.
+8.  FileNotFoundError : Raised when a file or directory is requested but cannot be found.
+9.  IOError : Raised when an input/output operation fails.
+10.  NameError : Raised when a local or global name is not found.
+11.  OverflowError : Raised when the result of an arithmetic operation is too large to be represented.
+12. ImportError : Raised when an import statement fails to find the module definition.
+13.  AttributeError : Raised when an attribute reference or assignment fails.
+14.  RuntimeError : Raised when an error does not fall under any other category.
+15.  MemoryError : Raised when an operation runs out of memory.
+
+These are just a few examples; Python has many more built-in exception classes for different types of errors.

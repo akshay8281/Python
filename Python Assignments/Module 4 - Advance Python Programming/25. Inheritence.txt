@@ -1,0 +1,110 @@
+25. Explain Inheritance in Python with an example? What is init?
+Ans :
+
+Inheritance in Python is a concept that allows a class (called a child or derived class) to inherit attributes and methods from another class (called a parent or base class). This allows for code reuse and a hierarchical organization of classes. 
+
+Explanation -
+
+Let's break down the provided example to understand inheritance in Python.
+
+///
+class A:
+    def getA(self, a):
+        self.a = a
+
+    def putA(self):
+        print("A :", self.a)
+
+class B(A):
+    def getB(self, b):
+        self.b = b
+
+    def putB(self):
+        print("B :", self.b)
+
+b1 = B()
+b1.getA(8)
+b1.getB(10)
+b1.putA()
+b1.putB()
+///
+
+Explanation of Code - 
+
+1. Class A :
+    - `class A` is defined with two methods:
+    - `getA(self, a)`: This method takes an argument `a` and assigns it to an instance variable `self.a`.
+        - `putA(self)`: This method prints the value of `self.a`.
+
+2. Class B :
+    - `class B(A)` means that class B is inheriting from class A.
+    - `class B` has its own methods:
+    - `getB(self, b)`: This method takes an argument `b` and assigns it to an instance variable `self.b`.
+        - `putB(self)`: This method prints the value of `self.b`.
+
+3. Creating an Instance of B :
+    - `b1 = B()`: An instance `b1` of class B is created.
+
+4. Using Inherited and Own Methods :
+    - `b1.getA(8)`: Calls the inherited method `getA` from class A, setting `b1.a` to 8.
+    - `b1.getB(10)`: Calls the method `getB` from class B, setting `b1.b` to 10.
+    - `b1.putA()`: Calls the inherited method `putA` from class A, printing `A : 8`.
+    - `b1.putB()`: Calls the method `putB` from class B, printing `B : 10`.
+
+>>> Key Points
+
+-  Inheritance : Class B inherits all the methods and properties of class A.
+-  Code Reuse : By inheriting class A, class B can use the methods `getA` and `putA` without needing to redefine them.
+-  Hierarchy : Class B is a subclass (child class) of class A, and class A is a superclass (parent class) of class B.
+
+>>>  Diagrammatic Representation
+
+///
+    A (Superclass)
+   / \
+getA  putA
+   \
+    B (Subclass)
+   / \
+getB  putB
+///
+
+In this diagram, `B` inherits from `A`, meaning `B` has access to `getA` and `putA` methods from `A` in addition to its own methods `getB` and `putB`.
+
+This is a basic example of inheritance in Python, showcasing how a derived class can extend the functionality of a base class by inheriting its methods and adding new ones.
+
+
+What is init?
+
+
+`__init__` is a special method in Python, known as the constructor. It is automatically called when an instance (object) of a class is created. The purpose of `__init__` is to initialize the object's attributes and perform any setup necessary for the object.
+
+>>> Key Points:
+
+-  Special Method : `__init__` is a dunder method (double underscore) and is part of Python's object-oriented programming.
+-  Initialization : It initializes the object's state by setting initial values for the object's attributes.
+-  Automatic Call : It is called automatically when a new object of the class is instantiated.
+
+>>> Example:
+
+///
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+
+>  Creating an instance of the Person class
+person1 = Person("Alice", 30)
+person1.display()  # Output: Name: Alice, Age: 30
+///
+
+In this example:
+
+- The `__init__` method initializes the `name` and `age` attributes for the `Person` object.
+- When `person1 = Person("Alice", 30)` is executed, the `__init__` method is automatically called with `name` set to "Alice" and `age` set to 30.
+- The `display` method prints out the initialized values.
+
+`__init__` ensures that the object is in a valid state after it is created.

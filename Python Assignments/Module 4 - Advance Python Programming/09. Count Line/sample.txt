@@ -1,0 +1,5 @@
+High-Level: Python is a high-level programming language.
+Interpreted: Python is an interpreted language
+Dynamically Typed : No need to declare variable types.
+Readable Syntax: Emphasizes readability and simplicity.
+Readable Syntax: Emphasizes readability and simplicity.

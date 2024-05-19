@@ -1,0 +1,17 @@
+16. Can one block of except statements handle multiple exception?
+
+Yes, a single `except` block can handle multiple exceptions by specifying them within a tuple. This is useful when you want to handle different exceptions in the same way. Here's an example:
+
+////
+
+try:
+    # Some code that may raise exceptions
+    file = open("myfile.txt", "r")
+    result = 10 / 0
+except (FileNotFoundError, ZeroDivisionError):
+    # This block will handle FileNotFoundError and ZeroDivisionError
+    print("An error occurred")
+
+////
+
+In this example, if either opening the file or dividing by zero raises an exception, the `except` block will catch it and print `"An error occurred"`.

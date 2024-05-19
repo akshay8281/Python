@@ -1,0 +1,25 @@
+17. When is the finally block executed?
+Ans :
+
+The `finally` block in a try-except-finally statement is always executed, regardless of whether an exception is raised or not. It provides a way to clean up resources or perform final actions that need to occur, such as closing files or releasing network connections. 
+
+Here's a basic example to illustrate this:
+
+///
+try:
+    # Code that may raise an exception
+    file = open("myfile.txt", "r")
+    result = 10 / 2
+except ZeroDivisionError:
+    # This block will be executed if a ZeroDivisionError occurs
+    print("Error: Division by zero!")
+else:
+    # This block will be executed if no exceptions occur
+    print("Division result:", result)
+finally:
+    # This block will always be executed, regardless of exceptions
+    file.close()
+    print("File closed")
+///
+
+In this example, whether an exception occurs or not, the `finally` block will always close the file and print "File closed".

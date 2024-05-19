@@ -1,0 +1,38 @@
+21. What are oops concepts
+Ans :
+
+Object-Oriented Programming Concepts
+
+The main concepts of object-oriented programming are:
+1. Class
+2. Object
+3. Inheritance
+4. Polymorphism
+5. Encapsulation
+6. Abstraction
+
+<<< Definitions >>>
+
+>> Class :
+A class is a blueprint for creating objects. It encapsulates data for the object and methods to manipulate that data. Essentially, a class groups together variables and functions.
+
+>> Object :
+An object is an instance of a class. It is a concrete entity based on the blueprint defined by the class.
+
+>> Inheritance :
+Inheritance allows an object of one class to acquire the properties and behaviors (methods) of another class. It is a mechanism for creating a new class from an existing class, promoting code reusability.
+
+>> Polymorphism :
+Polymorphism means "many shapes." It allows a single interface to represent different underlying data types. Polymorphism can be categorized into two types:
+
+1. Compile-time Polymorphism (Method Overloading) :
+When multiple methods in the same class have the same name but different parameters (different number or type of arguments), it is called method overloading.
+
+2. Runtime Polymorphism (Method Overriding) :
+When a method in a base class is redefined in a derived class with the same signature (name and parameters), the method in the derived class overrides the method in the base class. If you call this method using an object of the derived class, the derived class's method will be executed.
+
+>> Encapsulation :  
+Encapsulation is the concept of binding data and methods that operate on that data into a single unit, usually a class. It restricts direct access to some of the object's components, which can prevent the accidental modification of data.
+
+>> Abstraction :
+Abstraction means hiding the complex implementation details and showing only the essential features of an object. It helps in reducing programming complexity and effort.

@@ -1,0 +1,12 @@
+18. What happens when „1‟== 1 is executed?
+Ans :
+
+
+When the expression `"1" == 1` is executed in Python, it compares a string (`"1"`) with an integer (`1`). Since the types are different, Python does not consider them equal, even though the string `"1"` contains the character `1` which is the same value as the integer `1`. 
+
+In Python, when you compare objects of different types using `==`, the result is always `False`. If you want to compare them based on their values, you need to convert them to the same type. For example:
+
+/// 
+# Comparing after converting the string to an integer
+print(int("1") == 1)  # Output: True
+/// 

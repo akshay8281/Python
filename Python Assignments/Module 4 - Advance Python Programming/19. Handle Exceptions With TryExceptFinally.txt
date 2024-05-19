@@ -1,0 +1,40 @@
+19. How Do You Handle Exceptions With Try/Except/Finally In Python? Explain with coding snippets.
+Ans :
+
+In Python, you can handle exceptions using the `try`, `except`, and `finally` blocks. Here's how it works:
+
+1. The `try` block is used to enclose the code that might raise an exception.
+2. The `except` block is used to handle the specific exception that occurred within the `try` block.
+3. The `finally` block is used to execute code whether an exception occurs or not, typically for cleanup code.
+
+Here's an example to demonstrate how to use `try`, `except`, and `finally`:
+
+///
+try:
+    # Code that might raise an exception
+    x = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    # Handle the specific exception
+    print("Error: Division by zero")
+finally:
+    # Cleanup code or final statements
+    print("This is always executed")
+///
+
+In this example, the `try` block attempts to divide 10 by 0, which raises a `ZeroDivisionError`. The `except` block catches this exception and prints an error message. Finally, the `finally` block is always executed, whether an exception occurred or not, and it prints a message.
+
+You can also use `except` without specifying a particular exception to catch all exceptions:
+
+///
+try:
+    # Code that might raise an exception
+    x = 10 / 0  # This will raise a ZeroDivisionError
+except:
+    # Handle all exceptions
+    print("An error occurred")
+finally:
+    # Cleanup code or final statements
+    print("This is always executed")
+///
+
+However, it's generally recommended to handle specific exceptions whenever possible to provide more specific error messages and avoid catching unintended exceptions.
