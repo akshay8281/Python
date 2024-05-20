@@ -6,7 +6,3 @@ reverse = tupleData[::-1]
 
 print(reverse)
 
-
-
-
-

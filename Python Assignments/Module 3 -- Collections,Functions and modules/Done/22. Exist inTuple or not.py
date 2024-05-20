@@ -12,12 +12,3 @@ if userInput in Data:
 else:
     print("\n",userInput," does not exist in the Data.")
 
-
-
-
-
-
-
-
-
-

@@ -8,10 +8,3 @@ myList.pop()
 print("After Remove List Item\n", myList)
 
 
-
-
-
-
-
-
-

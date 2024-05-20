@@ -6,5 +6,7 @@ convertToStr = str(MyName)
 
 print(convertToStr)
 
+print(type(convertToStr))
+
 
 

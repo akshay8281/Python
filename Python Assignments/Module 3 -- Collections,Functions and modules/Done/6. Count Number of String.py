@@ -5,15 +5,14 @@ list of strings.
 '''
 
 string_list = ["abc", "xyz", "aba", "1221"]
+
 count = 0
 
 for string in string_list:
-    if len(string) >= 2 and string[0] == string[-1]:
+    if string and string[0] == string[-1]:
         count += 1
 
-print("The first and last character are the same: ",count)
-
-
+print("The first and last character are the same: ", count)
 
 
 
