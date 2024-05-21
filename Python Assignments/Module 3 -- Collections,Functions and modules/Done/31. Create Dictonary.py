@@ -3,7 +3,12 @@
 tuples = (('apple', 5), ('banana', 3), ('cherry', 8))
 
 dictionary = dict(tuples)
+dictData = {}
 
-print(dictionary)
+for key,value in tuples :
+    dictData[key] = value
+
+print(dictData)
+print(type(dictData))
 
 

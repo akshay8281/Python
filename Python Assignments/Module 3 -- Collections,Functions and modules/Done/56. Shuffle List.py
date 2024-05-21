@@ -11,7 +11,3 @@ random.shuffle(myList)
 print("\nResult After Shuffle : ", myList)
 print("\n", "*" * 60)
 
-
-
-
-

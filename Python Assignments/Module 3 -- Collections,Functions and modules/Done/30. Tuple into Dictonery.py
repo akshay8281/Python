@@ -2,9 +2,11 @@
 
 dataTupple = [('a', 1), ('b', 2), ('c', 3)]
 
-result = dict(dataTupple)
+result = {}
 
-print("Dictionary Data :", result)
+for key, value in dataTupple:
+    result[key] = value
 
+print("Dictionary Data:", result)
 
 

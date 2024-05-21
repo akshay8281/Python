@@ -1,17 +1,14 @@
 #57. Write a Python program to read a random line from a file.
 
-# File Create using Write Method
-print("\n","*"*60,"\n")
+import random
 
-file = open("myData.txt","r")
-print(file.read())
+file = open("sample.txt", 'r')
+lines = file.readlines()
 file.close()
 
-print("\n","*"*60)
-
-
-
-
-
-
-
+if lines:
+    randomLines = random.choice(lines).strip()
+    print("Random line from the file:")
+    print(randomLines)
+else:
+    print("The file is empty.")

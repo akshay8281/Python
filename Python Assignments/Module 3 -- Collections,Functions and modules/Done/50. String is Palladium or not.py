@@ -3,15 +3,13 @@
 
 print("\n","*" * 60,"\n")
 
-def isPalindrome(s):
-    return s == s[::-1]
+def isPalindrome(char):
+    return char == char[::-1]
  
-
 string = input("Enter a String : ")
-
-result = isPalindrome(string)
+output = isPalindrome(string)
  
-if result:
+if output:
     print("\n",string,": Yes,it is Palindroma")
 else:
     print("\n",string,": No,it is Palindroma")

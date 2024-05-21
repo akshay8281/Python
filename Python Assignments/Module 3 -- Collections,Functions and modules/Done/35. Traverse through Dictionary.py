@@ -3,12 +3,5 @@
 
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
 for key, value in my_dict.items():
-    print("Key : ",key)
-    print("Values : ",value)
-
-
-
-
-
-
-
+    print(key,":",value)
+   

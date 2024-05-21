@@ -9,7 +9,7 @@ for char in myStr:
         dictionary[char] += 1
     else:
         dictionary[char] = 1
-print("\nDictionary created from characters of the string is : \n")
+print("\nDictionary Character : \n")
 print(dictionary)
 
 print("\n","*" * 60)

@@ -9,11 +9,8 @@ data4 = {'Jigar': 222, 'Komal': 999}
 newData = {}
 
 newData.update(data1)
-
 newData.update(data2)
-
 newData.update(data3)
-
 newData.update(data4)
 
 print(newData)

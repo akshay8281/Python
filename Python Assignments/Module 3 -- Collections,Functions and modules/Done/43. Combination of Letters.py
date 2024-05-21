@@ -23,16 +23,5 @@ print("\nResult of Combinations : ")
 for alpha1 in data['1']:
     for alpha2 in data['2']:
       
-        print(alpha1 + alpha2, end=' ')
-
-
-
-
-
-
-
-
-
-
-
+        print(alpha1 + alpha2,end=" ")
 

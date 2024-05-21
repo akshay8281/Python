@@ -1,10 +1,10 @@
 # 38. Write a Python program to check multiple keys exists in a dictionary
 
-dataList = {"kishan": 123, "akshay": 888, "bhavin": 222, "jay": 777}
+dataList = {123 : "kishan", 888 : "akshay", 222 : "bhavin", 777 : "jay"}
 
 print("dataList : ",dataList,"\n")
 
-keyChecker = {"akshay", "apple", "fruity"}
+keyChecker = {1,3,888}
 
 print("keyChecker : ",keyChecker,"\n")
 

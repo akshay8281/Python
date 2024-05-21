@@ -8,6 +8,8 @@ Expected Output:
 Counter ({'item1': 1150, 'item2': 300})
 '''
 
+# cOPIED AND Modiefied
+
 print("\n","*" * 60,"\n")
 
 SampleData = [{'item': 'item1', 'amount': 400},
@@ -35,3 +37,4 @@ print("\nCombined data:")
 for item, total in result.items():
     print("Item :" ,item, "Total amount : ", total)
 print("*" * 60)
+'''

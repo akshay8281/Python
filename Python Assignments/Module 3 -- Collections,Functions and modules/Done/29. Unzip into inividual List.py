@@ -1,6 +1,7 @@
  # 29. Write a Python program to unzip a list of tuples into individual lists.
 
 
+
 tupleList = [(1, 2), ("Akshay","Pitroda"),(3, 4), (8, 9)]
 
 data_1 = []

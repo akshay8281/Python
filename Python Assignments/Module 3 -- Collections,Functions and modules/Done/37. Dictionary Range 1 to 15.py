@@ -5,7 +5,8 @@
 DictData = {}
 
 for i in range(1, 16):
-    DictData[i] = None
+    DictData[i] = "Value " + str(i)
 
-print("Keys with None Data : \n\n",DictData)
+print("Keys and Values : \n\n", DictData)
+
 

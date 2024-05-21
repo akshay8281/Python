@@ -7,9 +7,9 @@ keyChecker = input("Enter a Key to Check : ")
 
 if keyChecker in data:
     
-    print(keyChecker,"key exists in the dictionary.")
+    print(keyChecker," : key exists in the dictionary.")
 else:
-    print(keyChecker,"key does not exist in the dictionary.")
+    print(keyChecker," : key does not exist in the dictionary.")
 
 
 
