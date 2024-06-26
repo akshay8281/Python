@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Contact,User
 from django.conf import settings
 from django.core.mail import send_mail
 import random
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -176,3 +177,26 @@ def profile(request) :
 		return render(request,'profile.html',{'user':user,'msg':msg})
 	else :
 		return render(request,'profile.html',{'user':user})
+
+def home(request):
+    # Assuming you want to display some posts on the home page
+    posts = Post.objects.all()
+    return render(request, 'home.html', {'posts': posts})
+
+def create_post(request):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        author_id = request.POST.get('author_id')
+
+        try:
+            author = User.objects.get(id=author_id)
+        except User.DoesNotExist:
+            # Handle case where author does not exist
+            return render(request, 'create_post.html', {'users': User.objects.all(), 'error_message': 'Invalid author ID'})
+
+        Post.objects.create(title=title, content=content, author=author)
+        return redirect('index')  # Assuming 'index' is the name of the view for the homepage
+    else:
+        users = User.objects.all()
+        return render(request, 'create_post.html', {'users': users})
