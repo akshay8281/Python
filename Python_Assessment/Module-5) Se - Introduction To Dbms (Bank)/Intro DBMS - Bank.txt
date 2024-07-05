@@ -1,0 +1,154 @@
+Write SQL query to solve the problem given below
+
+Here we are talking about the Bank related information of a person
+
+For which you need to create three tables named as Bank, Account holder and Loan table.
+
+And solve the problem stated below:
+Create a Bank table, attributes are : branch id, branch name, branch city.
+
+Create a Loan table, attributes are : loan no, branch id, account holder’s id, loan amount and loan type.
+
+Create a table named as Account holder for the same scenario containing the attributes are account holder’s id, account no, account holder’s name, city,contact, date of account created, account status (active or terminated), account type and balance.
+
+● Consider an example where there’s an account holder table where we are doing an intra bank transfer i.e. a person holding account A is trying to transfer $100 to account B.
+
+- for this you have to make a transaction in sql which can transfer fund from account A to B.
+
+- Make sure after the transaction the account information have to be updated for both the credit account and the debited account.
+
+● Also fetch the details of the account holder who are related from the same city.
+● Write a query to fetch account number and account holder name, whose accounts were created after 15th of any month.
+● Write a query to display the city name and count the branches in that city. Give the count of branches an alias name of Count_Branch.
+● Write a query to display the account holder’s id, account holder’s name, branch id, and loan amount for people who have taken loans. (NOTE : use sql join concept to solve the query).
+
+Ans-------------------------
+
+-- Create Database for the Project
+
+CREATE DATABASE python_bank
+
+
+-- Creating Bank table
+
+CREATE TABLE Bank (
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(100),
+    branch_city VARCHAR(100)
+);
+
+
+-- Creating AccountHolder table
+
+CREATE TABLE AccountHolder (
+    account_holder_id INT PRIMARY KEY,
+    account_no VARCHAR(20),
+    account_holder_name VARCHAR(100),
+    city VARCHAR(100),
+    contact VARCHAR(20),
+    date_of_account_created DATE,
+    account_status ENUM('active', 'terminated'),
+    account_type VARCHAR(50),
+    balance DECIMAL(10, 2)
+);
+
+
+-- Creating Loan table
+
+CREATE TABLE Loan (
+    loan_no INT PRIMARY KEY,
+    branch_id INT,
+    account_holder_id INT,
+    loan_amount DECIMAL(10, 2),
+    loan_type VARCHAR(50),
+    FOREIGN KEY (branch_id) REFERENCES Bank(branch_id),
+    FOREIGN KEY (account_holder_id) REFERENCES AccountHolder(account_holder_id)
+);
+
+
+-- Inserting data into the Bank table
+
+INSERT INTO Bank (branch_id, branch_name, branch_city) VALUES
+(1, 'State Bank of India', 'Mumbai'),
+(2, 'Punjab National Bank', 'Delhi'),
+(3, 'HDFC Bank', 'Bangalore'),
+(4, 'ICICI Bank', 'Chennai');
+
+
+-- Inserting data into the AccountHolder table
+
+INSERT INTO AccountHolder (account_holder_id, account_no, account_holder_name, city, contact, date_of_account_created, account_status, account_type, balance) VALUES
+(1, 'A123', 'Ravi Kumar', 'Mumbai', '9876543210', '2023-06-14', 'active', 'savings', 5000.00),
+(2, 'B456', 'Sita Sharma', 'Delhi', '8765432109', '2023-05-20', 'active', 'current', 10000.00),
+(3, 'C789', 'Arjun Singh', 'Bangalore', '7654321098', '2023-04-10', 'terminated', 'savings', 7000.00),
+(4, 'D012', 'Lakshmi Nair', 'Chennai', '6543210987', '2023-03-15', 'active', 'current', 15000.00),
+(5, 'E345', 'Vikram Rao', 'Mumbai', '5432109876', '2023-07-18', 'active', 'savings', 12000.00),
+(6, 'F678', 'Meena Patel', 'Delhi', '4321098765', '2023-05-19', 'active', 'current', 3000.00);
+
+
+-- Inserting data into the Loan table
+
+INSERT INTO Loan (loan_no, branch_id, account_holder_id, loan_amount, loan_type) VALUES
+(1, 1, 1, 20000.00, 'home loan'),
+(2, 2, 2, 15000.00, 'car loan'),
+(3, 3, 3, 10000.00, 'personal loan'),
+(4, 4, 4, 5000.00, 'education loan'),
+(5, 1, 5, 25000.00, 'home loan');
+
+
+-- Transfer Funds Between Accounts
+
+START TRANSACTION;
+
+-- Deduct ₹100 from account A123 (Ravi Kumar)
+
+UPDATE AccountHolder
+SET balance = balance - 100
+WHERE account_no = 'A123';
+
+
+-- Add ₹100 to account B456 (Sita Sharma)
+
+UPDATE AccountHolder
+SET balance = balance + 100
+WHERE account_no = 'B456';
+
+COMMIT;
+
+
+-- Verify data in the AccountHolder table after the transfer
+
+SELECT * FROM AccountHolder;
+
+
+-- Fetch Account Holders from the Same City
+
+SELECT account_holder_id, account_holder_name, city, contact, date_of_account_created, account_status, account_type, balance
+FROM AccountHolder
+WHERE city IN (
+    SELECT city
+    FROM AccountHolder
+    GROUP BY city
+    HAVING COUNT(account_holder_id) > 1
+);
+
+
+-- Fetch Account Number and Name for Accounts Created After 15th of Any Month
+
+SELECT account_no, account_holder_name
+FROM AccountHolder
+WHERE DAY(date_of_account_created) > 15;
+
+
+-- Display City Name and Count of Branches
+
+SELECT branch_city, COUNT(branch_id) AS Count_Branch
+FROM Bank
+GROUP BY branch_city;
+
+
+-- Fetch Account Holder Details for People Who Have Taken Loans
+
+SELECT ah.account_holder_id, ah.account_holder_name, l.branch_id, l.loan_amount
+FROM Loan l
+JOIN AccountHolder ah ON l.account_holder_id = ah.account_holder_id;
